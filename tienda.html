@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 14px
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .header__wrapper {
+            height: 190px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px 70px;
+        }
+
+        .seccion1 {
+            height: 120px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .patron__header {
+            height: 20px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-image: url("./../Img/Patron__header.png");
+            background-size: 35%;
+            animation-name: deslizando;
+            animation-duration: 50s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+        }
+
+        @keyframes deslizando {
+            0% {
+                background-position: 0px 0px;
+            }
+
+            100% {
+                background-position: 2000px 0px;
+            }
+        }
+
+        .seccion2 {
+            height: 40px;
+            background-color: rgb(141, 177, 184, 0.3);
+        }
+
+        .header__main,
+        .header__list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .btn__menu {
+            outline: none;
+            color: #666666;
+            background-color: transparent;
+            font-size: 28px;
+            border: none;
+            padding-bottom: 8px;
+        }
+
+        .buscarmq {
+            width: 0px;
+            outline: none;
+            border: none;
+            margin: 0 5px 0 5px;
+            border-bottom: 1px solid rgb(221, 85, 89);
+            transition: width 0.5s ease-in;
+        }
+
+        .btn__mq2,
+        .buscadormq {
+            display: none;
+        }
+
+        .header__logo,
+        .header__buscador,
+        .header__links {
+            display: flex;
+            min-width: 250px;
+            justify-content: center;
+        }
+
+        .header__logo {
+            background-color: #fff;
+        }
+
+        .imagen__logo {
+            max-width: 250px;
+        }
+
+        .header__links,
+        .lih,
+        .header__navlink {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            text-decoration: none;
+            color: #666666;
+            font-size: 16px;
+        }
+
+        .link__Carrito {
+            padding-left: 15px;
+        }
+
+        .fas {
+            border: none;
+            font-size: 25px;
+            background-color: transparent;
+            color: rgb(11, 76, 96)
+        }
+
+        .fa-search {
+            color: rgb(221, 85, 89);
+            padding-bottom: 5px;
+        }
+
+        .buscar {
+            border: none;
+            padding-left: 20px;
+            padding-bottom: 5px;
+        }
+
+        .buscar:focus {
+            outline: none;
+        }
+
+        ::placeholder {
+            color: rgb(166, 172, 166);
+            border: none;
+        }
+
+        .buscador {
+            width: 230px;
+            border-bottom: 1px solid rgb(221, 85, 89);
+        }
+
+        .header__list {
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .header__navlink {
+            font-size: 14px;
+            transition: font-size 0.3s;
+        }
+
+        .header__navlink:hover {
+            font-size: 16px;
+        }
+
+        .seccion3 {
+            height: 30px;
+            background-color: rgb(221, 85, 89);
+            color: #fff;
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
+            position: relative
+        }
+
+        .aside__bar {
+            width: 0px;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 2px 5px rgb(34, 34, 34, 0.5);
+            transition: width 0.5s ease-in;
+        }
+
+        .sidebar__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar__ite {
+            height: 40px;
+        }
+
+        .sidebar__link {
+            display: block;
+            position: relative;
+            height: 100%;
+            width: 200px;
+            text-decoration: none;
+            font-size: 0px;
+            transition: font-size 0.5s ease-in-out;
+            cursor: inherit;
+        }
+
+        .sidebar__link>span {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            transition: 0.5s ease-in-out;
+            -webkit-transition: 0.5s ease-in-out;
+        }
+
+        .sidebar__link:after {
+            display: flex;
+            padding-left: 30px;
+            align-items: center;
+            content: attr(data-title);
+            height: 100%;
+            color: rgb(11, 76, 96);
+        }
+
+        .sidebar__link>span>span {
+            display: none;
+            height: 40px;
+            background: rgb(11, 76, 96, 0.5);
+        }
+
+        .sidebar__link:hover>span {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header__wrapper seccion1">
+
+            <div class="header__main">
+                <div class="btn__mq2">
+                    <button class="btn__menu open">
+                        &#9776;
+                    </button>
+                    <div class="buscadormq"><button type="submit" class="fas fa-search  "></button>
+                        <input class="buscarmq open-mobile" type="text" placeholder="Buscar">
+                    </div>
+                </div>
+
+                <div class="header__logo">
+                    <figure class="figure__logo">
+                        <img class="imagen__logo"
+                            src="https://aws-samishop-recursos.s3.us-east-1.amazonaws.com/00000D3E/es-PE/images/logo/Logotipo.png"
+                            alt="">
+                    </figure>
+                </div>
+
+
+                <div class="header__buscador">
+                    <div class="buscador"><button type="submit" class="fas fa-search  "></button>
+                        <input class="buscar" type="text" placeholder="Buscar">
+                    </div>
+                </div>
+
+
+                <div class="header__links">
+                    <li>
+                        <a href="#" class="lih link__Micuenta">
+                            <button class="fas fa-user"></button>
+                            <p class="text__header__link mc">Iniciar Sesión</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="lih link__Carrito">
+                            <button class="fas fa-shopping-cart"></button>
+                            <div class="car__div">
+                                <p class="text__header__link car" id="Carrito__contador">0</p>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+            </div>
+            <div class="patron__header"></div>
+        </div>
+
+        <div class="header__wrapper seccion2">
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li><a href="#" class="header__navlink">Mujer</a></li>
+                    <li><a href="#" class="header__navlink">Hombre</a></li>
+                    <li><a href="#" class="header__navlink">Tecnología</a></li>
+                    <li><a href="#" class="header__navlink">Hogar</a></li>
+                    <li><a href="#" class="header__navlink">Deporte</a></li>
+                    <li><a href="#" class="header__navlink">Tienda y marcas</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__wrapper seccion3">
+            <p>BIENVENIDOS A WASIO</p>
+        </div>
+
+    </header>
+
+    <main class="main">
+        <aside class="aside__bar ">
+            <nav class="sidebar__nav">
+                <ul class="sidebar__list">
+                    <li class="sidebar__ite">
+                        <a class="sidebar__link" href="#" data-title="Mujer"><span><span></span></span></a>
+                    </li>
+                    <li class="sidebar__ite">
+                        <a class="sidebar__link" href="#" data-title="Hombre"><span><span></span></span></a>
+                    </li>
+                    <li class="sidebar__ite">
+                        <a class="sidebar__link" href="#" data-title="Tecnología"><span><span></span></span></a>
+                    </li>
+                    <li class="sidebar__ite">
+                        <a class="sidebar__link" href="#" data-title="Hogar"><span><span></span></span></a>
+                    </li>
+                    <li class="sidebar__ite">
+                        <a class="sidebar__link" href="#" data-title="Deporte"><span><span></span></span></a>
+                    </li>
+                    <li class="sidebar__ite">
+                        <a class="sidebar__link" href="#" data-title="Tienda y marcas"><span><span></span></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </aside>
+
+    </main>
+
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="#">Tiendas y Marcas</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Avatar Tec</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div>
+            <img src="./IMAGES/tecnologia.jpg" class="img-fluid">
+            <h4 class="text-center fs-2 mt-4">AVATAR TEC</h4>
+            <h5 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quis commodi est, vel
+                perspiciatis
+                deleniti sequi modi minus ab dolorem non assumenda, repellat libero saepe? Fuga nesciunt maiores sint
+                quibusdam?. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo possimus praesentium vitae
+                accusantium et magnam delectus amet modi. Repudiandae esse voluptate earum repellendus et. Sapiente
+                delectus recusandae architecto expedita inventore.
+            </h5>
+        </div>
+        <div class="row">
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/Audifonos.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Audifonos</h5>
+                        <p class="card-text text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat aut eius sequi
+                            architecto accusamus
+                        </p>
+                        <p class="text-center"><strong><strike>S/. 70</strike></strong><span
+                                class="text-danger"><strong> - S/. 55</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/usb.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Usb portatil</h5>
+                        <p class="card-text text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat aut eius sequi
+                            architecto accusamus
+                        </p>
+                        <p class="text-center"><strong><strike>S/. 70</strike></strong><span
+                                class="text-danger"><strong> - S/. 55</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/Nintendo.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-center">Nintendo</h5>
+                        <p class="card-text text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat aut eius sequi
+                            architecto accusamus
+                        </p>
+                        <p class="text-center"><strong><strike>S/. 70</strike></strong><span
+                                class="text-danger"><strong> - S/. 55</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/cargador.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Cargador</h5>
+                        <p class="card-text text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat aut eius sequi
+                            architecto accusamus
+                        </p>
+                        <p class="text-center"><strong><strike>S/. 70</strike></strong><span
+                                class="text-danger"><strong> - S/. 55</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/camara.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Camara</h5>
+                        <p class="card-text text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat aut eius sequi
+                            architecto accusamus
+                        </p>
+                        <p class="text-center"><strong><strike>S/. 70</strike></strong><span
+                                class="text-danger"><strong> - S/. 55</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/airpods.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Airpods</h5>
+                        <p class="card-text text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat aut eius sequi
+                            architecto accusamus
+                        </p>
+                        <p class="text-center"><strong><strike>S/. 70</strike></strong><span
+                                class="text-danger"><strong> - S/. 55</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/correas.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Correas</h5>
+                        <p class="card-text text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat aut eius sequi
+                            architecto accusamus
+                        </p>
+                        <p class="text-center"><strong><strike>S/. 70</strike></strong><span
+                                class="text-danger"><strong> - S/. 55</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div class="card shadow-sm">
+                    <img src="./IMAGES/reloj.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Reloj</h5>
+                        <p class="card-text text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam placeat aut eius sequi
+                            architecto accusamus
+                        </p>
+                        <p class="text-center"><strong><strike>S/. 70</strike></strong><span
+                                class="text-danger"><strong> - S/. 55</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
