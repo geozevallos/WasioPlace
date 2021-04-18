@@ -1,7 +1,10 @@
-#WASIO PLACE
+# WASIO PLACE
 
+WASIO PLACE es un proyecto elaborado para el Bootcamp de Desarrollo web de CodiGO.
 
-* JORGE AREVALO [I'm an inline-style link](https://www.google.com)
-* MICHELLE CHAPMAN [I'm an inline-style link](https://www.google.com)
-* BRAHYAN ADRIAN	CUEVA [I'm an inline-style link](https://www.google.com)
+El proyecto es desarrollado por:
+
+* [JORGE AREVALO](https://github.com/jarevalo1)
+* [MICHELLE CHAPMAN](https://github.com/Michelle162002)
+* [BRAHYAN CUEVA](https://github.com/bryancs14)
 * [JORGE ZEVALLOS](https://github.com/geozevallos)
