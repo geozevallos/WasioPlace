@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./InformacionDePago.css" />
+
+    <!-- Del header -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper seccion1">
+        <div class="header__main">
+          <div class="btn__mq2">
+            <button class="btn__menu open">&#9776;</button>
+            <div class="buscadormq">
+              <button type="submit" class="fas fa-search"></button>
+              <input
+                class="buscarmq open-mobile"
+                type="text"
+                placeholder="Buscar"
+              />
+            </div>
+          </div>
+
+          <div class="header__logo">
+            <figure class="figure__logo">
+              <img
+                class="imagen__logo"
+                src="https://aws-samishop-recursos.s3.us-east-1.amazonaws.com/00000D3E/es-PE/images/logo/Logotipo.png"
+                alt=""
+              />
+            </figure>
+          </div>
+
+          <div class="header__buscador">
+            <div class="buscador">
+              <button type="submit" class="fas fa-search"></button>
+              <input class="buscar" type="text" placeholder="Buscar" />
+            </div>
+          </div>
+
+          <div class="header__links">
+            <li>
+              <a href="#" class="lih link__Micuenta">
+                <button class="fas fa-user"></button>
+                <p class="text__header__link mc">Iniciar Sesión</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="lih link__Carrito">
+                <button class="fas fa-shopping-cart"></button>
+                <div class="car__div">
+                  <p class="text__header__link car" id="Carrito__contador">0</p>
+                </div>
+              </a>
+            </li>
+          </div>
+        </div>
+        <div class="patron__header"></div>
+      </div>
+
+      <div class="header__wrapper seccion2">
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li><a href="#" class="header__navlink">Mujer</a></li>
+            <li><a href="#" class="header__navlink">Hombre</a></li>
+            <li><a href="#" class="header__navlink">Tecnología</a></li>
+            <li><a href="#" class="header__navlink">Hogar</a></li>
+            <li><a href="#" class="header__navlink">Deporte</a></li>
+            <li><a href="#" class="header__navlink">Tienda y marcas</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__wrapper seccion3">
+        <p>BIENVENIDOS A WASIO</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="contenedor-wraper">
+        <section>
+          <div>
+            <p><a href="#">Inicio</a> / <span>Caja</span></p>
+          </div>
+        </section>
+        <section class="contenedor-principal">
+          <section class="contenedor-caja">
+            <section class="caja">
+              <h2>Caja</h2>
+              <div>
+                <h3>Dirección de envío</h3>
+                <form class="form-superior">
+                  <section class="seccion-formulario">
+                    <div class="div-formulario">
+                      <label for="">Nombre (*):</label>
+                      <input type="text" class="input-formulario" />
+                    </div>
+                    <div class="div-formulario">
+                      <label for="">Apellido (*):</label>
+                      <input type="text" class="input-formulario" />
+                    </div>
+                    <div class="div-formulario">
+                      <label for="">Dirección (*):</label>
+                      <input type="text" class="input-formulario" />
+                    </div>
+                    <div class="div-formulario">
+                      <label for="">Referencia:</label>
+                      <input type="text" class="input-formulario" />
+                    </div>
+                    <div class="div-formulario">
+                      <label for="">Teléfono (*):</label>
+                      <input type="text" class="input-formulario" />
+                    </div>
+                  </section>
+                  <section class="seccion-formulario">
+                    <div class="div-formulario">
+                      <label for="">País (*):</label>
+                      <select name="" id="" class="input-formulario">
+                        <option value="">Lima</option>
+                      </select>
+                    </div>
+                    <div class="div-formulario">
+                      <label for="">Departamento:</label>
+                      <select name="" id="" class="input-formulario">
+                        <option value="">Lima</option>
+                      </select>
+                    </div>
+                    <div class="div-formulario">
+                      <label for="">Provincia:</label>
+                      <select name="" id="" class="input-formulario">
+                        <option value="">Lima</option>
+                      </select>
+                    </div>
+                    <div class="div-formulario">
+                      <label for="">Distrito:</label>
+                      <select name="" id="" class="input-formulario">
+                        <option value="">Lima</option>
+                      </select>
+                    </div>
+                  </section>
+                </form>
+              </div>
+              <div>
+                <div class="encabezado-form2">
+                  <h3>Información de contacto:</h3>
+                  <div class="radio-checkbox">
+                    <label for="">Igual que mi dirección de envío</label>
+                    <input type="checkbox" name="aaa" id="aaa" />
+                  </div>
+                </div>
+                <form class="formulario2">
+                  <div class="radio-bf">
+                    <div class="radio-checkbox">
+                      <label for="">Boleta</label>
+                      <input type="radio" value="" name="TipodePago"/>
+                    </div>
+                    <div class="radio-checkbox">
+                      <label for="">Factura</label>
+                      <input type="radio" value="" name="TipodePago"/>
+                    </div>
+                  </div>
+                  <div class="division-formulario form-superior">
+                    <section class="seccion-formulario">
+                      <div class="div-formulario">
+                        <label for="">Nombre (*):</label>
+                        <input type="text" class="input-formulario" />
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Apellido (*):</label>
+                        <input type="text" class="input-formulario" />
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Dirección (*):</label>
+                        <input type="text" class="input-formulario" />
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Referencia:</label>
+                        <input type="text" class="input-formulario" />
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Teléfono (*):</label>
+                        <input type="text" class="input-formulario" />
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Tipo de documento (*):</label>
+                        <select name="" id="" class="input-formulario">
+                          <option value="">DNI</option>
+                          <option value="">Carne de extranjeria</option>
+                        </select>
+                      </div>
+
+                      <div class="div-formulario">
+                        <label for="">Nro de documento (*):</label>
+                        <input type="text" class="input-formulario" />
+                      </div>
+                    </section>
+                    <section class="seccion-formulario">
+                      <div class="div-formulario">
+                        <label for="">País (*):</label>
+                        <select name="" id="" class="input-formulario">
+                          <option value="">Lima</option>
+                        </select>
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Departamento:</label>
+                        <select name="" id="" class="input-formulario">
+                          <option value="">Lima</option>
+                        </select>
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Provincia:</label>
+                        <select name="" id="" class="input-formulario">
+                          <option value="">Lima</option>
+                        </select>
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Distrito:</label>
+                        <select name="" id="" class="input-formulario">
+                          <option value="">Lima</option>
+                        </select>
+                      </div>
+                      <div class="div-formulario">
+                        <label for="">Dirección Email (*):</label>
+                        <input type="text" class="input-formulario" />
+                      </div>
+                    </section>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <section>
+              <div class="radio-checkbox">
+                <input type="checkbox" name="" id="" />
+                <label for=""
+                  >Si, acepto brindar mis datos personales y estoy de acuerdo
+                  con los términos y condiciones.
+                </label>
+              </div>
+              <div class="radio-checkbox">
+                <input type="checkbox" name="" id="" />
+                <label for=""
+                  >Acepto recibir comunicaciones y promociones de la
+                  marca.</label
+                >
+              </div>
+            </section>
+            <div>
+              <h3>Formas de Pago</h3>
+              <div class="contenedor-formadepago">
+                <div class="contorno-cabecera-pago">
+                  <div class="cabecera-pago">
+                    <input type="radio" name="" id="" />
+                    <img
+                      class="img_pago"
+                      src="/img/bancos.png"
+                      id="imgpay_1"
+                    />
+                    <label for=""> Pagar con tarjeta</label>
+                  </div>
+                </div>
+                <div class="descripcion-contenedor">
+                  <div class="descripcion-metodoPago">
+                    <ul>
+                      <li>
+                        Realice sus pagos directamente con su tarjeta de Crédito
+                        o Débito.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="contenedor-formadepago">
+                <div class="contorno-cabecera-pago">
+                  <div class="cabecera-pago">
+                    <input type="radio" name="" id="" />
+                    <img
+                      class="img_pago"
+                      src="/img/moneda.png"
+                      id="imgpay_1"
+                    />
+                    <label for=""> Transferencia bancaria</label>
+                  </div>
+                </div>
+                <div class="descripcion-contenedor">
+                  <div class="descripcion-metodoPago">
+                    <ul>
+                      <li>
+                        Realice sus pagos directamente con transferencia
+                        bancaria.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <aside class="contenedor-aside">
+            <div class="contenedor-aside-precios">
+              <div class="contenedor-precios">
+                <h3>Resumen de la orden</h3>
+                <div class="texto-precios">
+                  <p>Items</p>
+                  <p class="precio">S./ 2500</p>
+                </div>
+                <hr />
+                <div class="texto-precios">
+                  <p>Subtotal</p>
+                  <p class="precio">S./ 2500</p>
+                </div>
+                <div class="texto-precios">
+                  <p>Descuento</p>
+                  <p class="precio">S./ 2500</p>
+                </div>
+                <div class="texto-precios">
+                  <p>Envío</p>
+                  <p class="precio">S./ 2500</p>
+                </div>
+                <hr />
+                <div class="texto-precios">
+                  <p>TOTAL</p>
+                  <p class="precio descuento">S./ 2500</p>
+                </div>
+                <p>Certificados y cupones</p>
+                <div class="descuento-cupon">
+                  <input class="input-dscto" type="text" />
+                  <button class="boton-descuento">APLICAR</button>
+                </div>
+                <button class="boton-pago">CONTINUAR</button>
+              </div>
+            </div>
+          </aside>
+        </section>
+        <!-- SECCION SUSRIPCION -->
+        <section class="seccion-suscripcion">
+          <figure>
+            <img class="img_suscripcion" src="https://aws-samishop-recursos.s3.amazonaws.com/00000D3E/es-PE/images/icons/WEB_WASIO_HOME_MATERIAL_TRAMA.png" alt="">
+        </figure>
+        <div class="seccion-suscripcion">
+            <p class="suscribete">Suscríbete a nuestro newsletter</p>
+            <p>...Sé el primero en recibir todas las ofertas y promociones</p>
+            <form class="input-container">
+                <input class="input-suscribete" type="text" placeholder="Ingrese su correo">
+                <button class="btn-subscribete">></button>
+            </form>
+        </div>
+        </section>
+      </div>
+    </main>
+    <!-- Script del Header -->
+    <script>
+      const btnHeaderMenu = document.querySelector("button.btn__menu");
+      const asideSideBar = document.querySelector("aside.aside__bar");
+      btnHeaderMenu.onclick = (e) => {
+        asideSideBar.classList.toggle("open");
+      };
+    </script>
+    <script>
+      const btnBuscadorMenu = document.querySelector("button.fa-search");
+      const InputBuscador = document.querySelector("input.buscarmq");
+      btnBuscadorMenu.onclick = (e) => {
+        InputBuscador.classList.toggle("open-mobile");
+      };
+    </script>
+  </body>
+</html>

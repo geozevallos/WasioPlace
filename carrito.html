@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="carrito.css" />
+
+    <!-- Del header -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper seccion1">
+        <div class="header__main">
+          <div class="btn__mq2">
+            <button class="btn__menu open">&#9776;</button>
+            <div class="buscadormq">
+              <button type="submit" class="fas fa-search"></button>
+              <input
+                class="buscarmq open-mobile"
+                type="text"
+                placeholder="Buscar"
+              />
+            </div>
+          </div>
+
+          <div class="header__logo">
+            <figure class="figure__logo">
+              <img
+                class="imagen__logo"
+                src="https://aws-samishop-recursos.s3.us-east-1.amazonaws.com/00000D3E/es-PE/images/logo/Logotipo.png"
+                alt=""
+              />
+            </figure>
+          </div>
+
+          <div class="header__buscador">
+            <div class="buscador">
+              <button type="submit" class="fas fa-search"></button>
+              <input class="buscar" type="text" placeholder="Buscar" />
+            </div>
+          </div>
+
+          <div class="header__links">
+            <li>
+              <a href="#" class="lih link__Micuenta">
+                <button class="fas fa-user"></button>
+                <p class="text__header__link mc">Iniciar Sesión</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="lih link__Carrito">
+                <button class="fas fa-shopping-cart"></button>
+                <div class="car__div">
+                  <p class="text__header__link car" id="Carrito__contador">0</p>
+                </div>
+              </a>
+            </li>
+          </div>
+        </div>
+        <div class="patron__header"></div>
+      </div>
+
+      <div class="header__wrapper seccion2">
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li><a href="#" class="header__navlink">Mujer</a></li>
+            <li><a href="#" class="header__navlink">Hombre</a></li>
+            <li><a href="#" class="header__navlink">Tecnología</a></li>
+            <li><a href="#" class="header__navlink">Hogar</a></li>
+            <li><a href="#" class="header__navlink">Deporte</a></li>
+            <li><a href="#" class="header__navlink">Tienda y marcas</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__wrapper seccion3">
+        <p>BIENVENIDOS A WASIO</p>
+      </div>
+    </header>
+    <main>
+      <div class="contenedor-wraper">
+        <section>
+          <div>
+            <p><a href="#">Inicio</a> / <span>Caja</span></p>
+          </div>
+        </section>
+        <section class="contenedor-principal">
+          <div class="lista-compras">
+            <div class="titulo-lista">
+              <div class="titulo">Carro de compras</div>
+              <div class="cabeceras">
+                <div>Precio</div>
+                <div>Cantidad</div>
+                <div>Subtotal</div>
+              </div>
+            </div>
+            <div class="fila-producto">
+              <div class="img-descripcion">
+                <figure>
+                  <img
+                    class="img-productos"
+                    src="https://aws-samishop-recursos.s3.us-east-1.amazonaws.com/00000D3E/es-PE/images/banners/22-min.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="detalles-producto">
+                  <h3>Bicicleta</h3>
+                  <i>Stock disponible</i>
+                  <small>SKU:VMPS2Rojo</small>
+                  <a href="#">Eliminar</a>
+                </div>
+              </div>
+              <div class="cabeceras">
+                <div>S/ 2500</div>
+                <div class="cuadrado">
+                    <p>2</p></div>
+                <div>S/ 5000</div>
+              </div>
+            </div>
+            <div class="fila-producto">
+              <div class="img-descripcion">
+                <figure>
+                  <img
+                    class="img-productos"
+                    src="https://aws-samishop-recursos.s3.us-east-1.amazonaws.com/00000D3E/es-PE/images/banners/vmp-s2-rojo.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="detalles-producto">
+                  <h3>Bicicleta</h3>
+                  <i>Stock disponible</i>
+                  <small>SKU:VMPS2Rojo</small>
+                  <a href="#">Eliminar</a>
+                </div>
+              </div>
+              <div class="cabeceras">
+                <div>S/ 2500</div>
+                <div class="cuadrado">
+                    <p>2</p></div>
+                <div>S/ 5000</div>
+              </div>
+            </div>
+            <div class="fila-producto">
+              <div class="img-descripcion">
+                <figure>
+                  <img
+                    class="img-productos"
+                    src="https://aws-samishop-recursos.s3.us-east-1.amazonaws.com/00000D3E/es-PE/images/banners/9da40ff6-ea57-4bd3-a6ac-ed94ceb1aab7-min_(1).jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="detalles-producto">
+                  <h3>Bicicleta</h3>
+                  <i>Stock disponible</i>
+                  <small>SKU:VMPS2Rojo</small>
+                  <a href="#">Eliminar</a>
+                </div>
+              </div>
+              <div class="cabeceras">
+                <div>S/ 2500</div>
+                <div class="cuadrado">
+                    <p>2</p></div>
+                <div>S/ 5000</div>
+              </div>
+            </div>
+            <div class="fila-total">
+                <p class="p-total">S/ 15000</p>
+            </div>
+          </div>
+          <aside class="contenedor-aside">
+            <div class="contenedor-precios">
+                <div class="texto-precios">
+                  <p>Precio Regular</p>
+                  <p class="precio">S./ 2500</p>
+                </div>
+                <div class="texto-precios">
+                  <p>Descuento</p>
+                  <p class="precio">S./ 2500</p>
+                </div>
+                <hr />
+                <div class="texto-precios">
+                  <p>Precio con descuento</p>
+                  <p class="precio descuento">S./ 2500</p>
+                </div>
+                <button class="boton-pago">IR A PAGAR</button>
+                <small class="disclaimer"
+                  >Los códigos promocionales se pueden utilizar en la página
+                  siguiente</small
+                >
+              </div>
+          </aside>
+
+        </section>
+                <!-- SECCION SUSRIPCION -->
+                <section class="seccion-suscripcion">
+                    <figure>
+                      <img class="img_suscripcion" src="https://aws-samishop-recursos.s3.amazonaws.com/00000D3E/es-PE/images/icons/WEB_WASIO_HOME_MATERIAL_TRAMA.png" alt="">
+                  </figure>
+                  <div class="seccion-suscripcion">
+                      <p class="suscribete">Suscríbete a nuestro newsletter</p>
+                      <p>...Sé el primero en recibir todas las ofertas y promociones</p>
+                      <form class="input-container">
+                          <input class="input-suscribete" type="text" placeholder="Ingrese su correo">
+                          <button class="btn-subscribete">></button>
+                      </form>
+                  </div>
+                  </section>
+      </div>
+    </main>
+
+
+        <!-- Script del Header -->
+        <script>
+            const btnHeaderMenu = document.querySelector("button.btn__menu");
+            const asideSideBar = document.querySelector("aside.aside__bar");
+            btnHeaderMenu.onclick = (e) => {
+              asideSideBar.classList.toggle("open");
+            };
+          </script>
+          <script>
+            const btnBuscadorMenu = document.querySelector("button.fa-search");
+            const InputBuscador = document.querySelector("input.buscarmq");
+            btnBuscadorMenu.onclick = (e) => {
+              InputBuscador.classList.toggle("open-mobile");
+            };
+          </script>
+  </body>
+</html>
